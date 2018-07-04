@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44534E9C-7ADE-4D72-9DAA-13F99179992E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POSMainForm</RootNamespace>
+    <AssemblyName>Farmacia RTR Inventory System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Aha-Soft-Medical-Drug-basket.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.3.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCompleteTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoCompleteTextboxBarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsReportC.cs">
+      <DependentUpon>dsReportC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReportC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditCategory.Designer.cs">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditProduct.Designer.cs">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProductQuick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProductQuick.Designer.cs">
+      <DependentUpon>frmAddProductQuick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabaseConfig.Designer.cs">
+      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnterPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnterPassword.Designer.cs">
+      <DependentUpon>frmEnterPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportProduct.Designer.cs">
+      <DependentUpon>frmImportProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListofTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListofTransactions.Designer.cs">
+      <DependentUpon>frmListofTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListReturns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListReturns.Designer.cs">
+      <DependentUpon>frmListReturns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportFilterDailySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportFilterDailySales.Designer.cs">
+      <DependentUpon>frmReportFilterDailySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListCategory.Designer.cs">
+      <DependentUpon>frmListCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListProduct.Designer.cs">
+      <DependentUpon>frmListProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListProductStocksIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListProductStocksIn.Designer.cs">
+      <DependentUpon>frmListProductStocksIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListStaff.Designer.cs">
+      <DependentUpon>frmListStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditStaff.Designer.cs">
+      <DependentUpon>frmAddEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDailSalesByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDailSalesByUser.Designer.cs">
+      <DependentUpon>frmReportDailSalesByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportFilterStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportFilterStocks.Designer.cs">
+      <DependentUpon>frmReportFilterStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportStocksIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportStocksIn.Designer.cs">
+      <DependentUpon>frmReportStocksIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportStocksOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportStocksOut.Designer.cs">
+      <DependentUpon>frmReportStocksOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSameBarcodeItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSameBarcodeItems.Designer.cs">
+      <DependentUpon>frmSameBarcodeItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCategory.Designer.cs">
+      <DependentUpon>frmSelectCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemSetting.Designer.cs">
+      <DependentUpon>frmSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLConn.cs" />
+    <EmbeddedResource Include="AutoCompleteTextboxBarcode.resx">
+      <DependentUpon>AutoCompleteTextboxBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditCategory.resx">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditProduct.resx">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProductQuick.resx">
+      <DependentUpon>frmAddProductQuick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabaseConfig.resx">
+      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnterPassword.resx">
+      <DependentUpon>frmEnterPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportProduct.resx">
+      <DependentUpon>frmImportProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListofTransactions.resx">
+      <DependentUpon>frmListofTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListReturns.resx">
+      <DependentUpon>frmListReturns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportFilterDailySales.resx">
+      <DependentUpon>frmReportFilterDailySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListCategory.resx">
+      <DependentUpon>frmListCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListProduct.resx">
+      <DependentUpon>frmListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListProductStocksIn.resx">
+      <DependentUpon>frmListProductStocksIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListStaff.resx">
+      <DependentUpon>frmListStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditStaff.resx">
+      <DependentUpon>frmAddEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDailSalesByUser.resx">
+      <DependentUpon>frmReportDailSalesByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportFilterStocks.resx">
+      <DependentUpon>frmReportFilterStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportStocksIn.resx">
+      <DependentUpon>frmReportStocksIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportStocksOut.resx">
+      <DependentUpon>frmReportStocksOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSameBarcodeItems.resx">
+      <DependentUpon>frmSameBarcodeItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCategory.resx">
+      <DependentUpon>frmSelectCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemSetting.resx">
+      <DependentUpon>frmSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptReturn.rdlc" />
+    <EmbeddedResource Include="rptDailySalesReportByInvoiceNo.rdlc" />
+    <EmbeddedResource Include="rptDailySalesReportByUser.rdlc" />
+    <EmbeddedResource Include="rptStocksIn.rdlc" />
+    <EmbeddedResource Include="rptStocksOut.rdlc" />
+    <None Include="app.config" />
+    <None Include="dsReportC.xsc">
+      <DependentUpon>dsReportC.xsd</DependentUpon>
+    </None>
+    <None Include="dsReportC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReportC.xss">
+      <DependentUpon>dsReportC.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aha-Soft-Medical-Drug-basket.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
